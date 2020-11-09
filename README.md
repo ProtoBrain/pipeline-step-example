@@ -69,7 +69,7 @@
 GET https://api.protobrain.io/api/v1/fire/act/novelties?offset=0&limit=50
 ```
     
-```json
+```jsonc
 {
   "count": 1,
   "data": [
@@ -142,7 +142,7 @@ GET https://api.protobrain.io/api/v1/fire/act/novelties?offset=0&limit=50
 GET https://api.protobrain.io/api/v1/act/{act_id}/expanded
 ```
 
-```json
+```jsonc
 {
   "act": {
     "id": 25006,
@@ -251,7 +251,7 @@ GET https://api.protobrain.io/api/v1/act/{act_id}/data_layer/transcription?inclu
 ```
 
 Возвращает список Data Layer и вложенных Data Layer Item для каждого из провайдеров транскрибации
-```json
+```jsonc
 {
   "count": 1,
   "data": [
@@ -319,7 +319,7 @@ https://api.protobrain.io/api/v1/act/{act_id}/data_layer/speaker_diarisation?inc
 ```
 
 Возвращает список Data Layer и вложенных Data Layer Item
-```json
+```jsonc
 {
   "count": 1,
   "data": [
@@ -410,19 +410,19 @@ POST https://api.protobrain.io/api/v1/fire/act/{act_id}/data_layer
 
 Данные ()
 
-```json
+```jsonc
 {
-    type: "label", // Всегда label
-    subtype: "scene", // Всегда scene
-    act_id: 4004, // ID акта, в котором вы хотите создать слой
-    color: "#6FCF97", // Цвет в HEX
-    is_private: false, // Для того, чтобы все видили ваши слои
-    comment: "Test" // Комментарий, если необходимо
+    "type": "label", // Всегда label
+    "subtype": "scene", // Всегда scene
+    "act_id": 4004, // ID акта, в котором вы хотите создать слой
+    "color": "#6FCF97", // Цвет в HEX
+    "is_private": false, // Для того, чтобы все видили ваши слои
+    "comment": "Test" // Комментарий, если необходимо
 }
 ```
 
 Ответ
-```json
+```jsonc
 {
   "id": 11111,
   "type": "label",
@@ -465,19 +465,19 @@ POST https://api.protobrain.io/api/v1/fire/label/scene
 
 Запрос
 
-```json
+```jsonc
 {
-    data_layer_id: 11111, // Data layer id, из прошлого запроса
-    position: 179, // Позиция относительно таймалайна акта (если это видео количество секунд от начала)
-    length: 41, // Длинна сцены в секундах
-    comment: "Test", // Коментарий если необходимо
-    color: "#C78EE2" // Цвет в HEX
+    "data_layer_id": 11111, // Data layer id, из прошлого запроса
+    "position": 179, // Позиция относительно таймалайна акта (если это видео количество секунд от начала)
+    "length": 41, // Длинна сцены в секундах
+    "comment": "Test", // Коментарий если необходимо
+    "color": "#C78EE2" // Цвет в HEX
 }
 ```
 
 Ответ
 
-```json
+```jsonc
 {
   "position": 179,
   "length": 41,
